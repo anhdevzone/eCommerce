@@ -8,6 +8,9 @@ import {
   loginUser,
   updateShippingAddress,
   updateProfile,
+  forgotPassword,
+  verifyOtpReset,
+  resetPassword,
 } from "../controllers/authController.js";
 import { adminOnly, protect } from "../middleware/authMiddleware.js";
 import { upload } from "../middleware/upload.js";
@@ -25,5 +28,9 @@ router.post("/create-seller", protect, adminOnly, createSeller);
 router.post("/seller-login", loginSeller);
 router.put("/shipping-address", protect, updateShippingAddress);
 router.put("/update-profile", protect, upload.single("avatar"), updateProfile);
+
+router.post("/forgot-password", forgotPassword);
+router.post("/verify-otp-reset", verifyOtpReset);
+router.post("/reset-password", resetPassword);
 
 export default router;
