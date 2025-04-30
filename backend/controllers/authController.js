@@ -184,10 +184,11 @@ export const loginAdmin = async (req, res) => {
       message: "Đăng nhập admin thành công.",
       success: true,
       user: {
+        name: "ADMIN TỔNG",
         email,
         role: "admin",
       },
-      accessToken: token,
+      token,
     });
   } catch (error) {
     res
@@ -273,7 +274,7 @@ export const loginSeller = async (req, res) => {
     res.status(200).json({
       message: "Đăng nhập thành công.",
       token,
-      seller: {
+      user: {
         id: seller._id,
         name: seller.name,
         email: seller.email,
