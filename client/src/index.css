@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+@theme {
+  --color-primary: #11b76b;
+}
+
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-input-outlined {
+  height: 40px !important;
+  border-radius: 10px !important;
+}
+
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-input-outlined:focus,
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-input-outlined:active,
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-input-outlined:hover,
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-input-outlined:focus, :where(.css-dev-only-do-not-override-1m2bkf9).ant-input-outlined:focus-within {
+  border-color: #11b76b !important;
+}
+
+:where(.css-dev-only-do-not-override-1m2bkf9).ant-form-item {
+  margin-bottom: 0px !important;
+}
